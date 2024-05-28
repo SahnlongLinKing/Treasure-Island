@@ -1,7 +1,9 @@
-a = input("Type every input all lowercase, with no punctuation. Type confirm to confirm you're ready.")
+a = input(
+    "Type every input all lowercase, with no punctuation. Type confirm to confirm you're ready."
+)
 if a == "confirm":
-        print(
-                """"*******************************************************************************
+    print(
+        """"*******************************************************************************
          ,,
         `""*$b..
              ""*$o.
@@ -26,25 +28,25 @@ if a == "confirm":
             mls                              .$"
                                              "
         *******************************************************************************"""
+    )
+    print("Your mission is to find the treasure.")
+
+    #https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+    #Write your code below this line 👇
+    direction = input("Go left or right? ")
+    if direction.lower() == "left":
+        print("Yay! You survived.")
+        swimwait = input("Would you like to walk, or drive? ")
+        if swimwait == "walk":
+            print("Yay! You survived.")
+            door = input(
+                "Which door would you like to go through? Red, Blue, or Yellow? "
             )
-        print("Your mission is to find the treasure.")
-
-            #https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
-
-            #Write your code below this line 👇
-        direction = input("Go left or right? ")
-        if direction.lower() == "left":
-                print("Yay! You survived.")
-                swimwait = input("Would you like to walk, or drive? ")
-                if swimwait == "walk":
-                    print("Yay! You survived.")
-                    door = input(
-                        "Which door would you like to go through? Red, Blue, or Yellow? "
-                    )
-                    if door.lower() == "yellow":
-                        victory = True
-                        print(
-                            """8b           d8 88                                                       
+            if door.lower() == "yellow":
+                victory = True
+                input(
+                    """8b           d8 88                                                       
 `8b         d8' ""              ,d                                       
  `8b       d8'                  88                                       
   `8b     d8'   88  ,adPPYba, MM88MMM ,adPPYba,  8b,dPPYba, 8b       d8  
@@ -53,15 +55,14 @@ if a == "confirm":
      `888'      88 "8a,   ,aa   88,  "8a,   ,a8" 88           `8b,d8'    
       `8'       88  `"Ybbd8"'   "Y888 `"YbbdP"'  88             Y88'     
                                                                 d8'      
-                                                               d8' """
-                        )
-                    elif door.lower() == "red":
-                        print("Burned by fire. Game over.")
-                    elif door.lower() == "blue":
-                        print("Eaten by beasts. Game over.")
-                    else:
-                        print("Game over.")
-                else:
-                    print("Attacked by serpent. Game over.")
+                                                               d8' """)
+            elif door.lower() == "red":
+                input("Burned by fire. Game over.")
+            elif door.lower() == "blue":
+                input("Eaten by beasts. Game over.")
+            else:
+                input("Game over.")
         else:
-                print("You fell into a hole. Game over.")
+            input("Attacked by serpent. Game over.")
+    else:
+        input("You fell into a hole. Game over.")
